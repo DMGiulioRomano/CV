@@ -1,6 +1,5 @@
 from: markdown
 to: pdf
 pdf-engine: xelatex
-metadata-file:
-  - metadata.yaml
+metadata-file: cv.yml
 template: styles/CV.latex

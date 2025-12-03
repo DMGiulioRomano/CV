@@ -15,7 +15,6 @@
 
 \usepackage{graphicx}
 \usepackage{array}
-\usepackage{titlesec}
 \usepackage{hyperref}
 \usepackage{xcolor}
 \usepackage{wrapfig}
@@ -27,12 +26,19 @@
 }
 
 % ------------------ Stile sezioni ------------------
-\titleformat{\section}
-    {\large\bfseries\scshape}
-    {}{0pt}{}
-[\vspace{-0.3em}\titlerule[1.8pt]\vspace{1.2em}]
+\makeatletter
+\renewcommand\section{
+    \@startsection{section}{1}{0pt}%
+    {1.2em}%
+    {0.8em}%
+    {\large\bfseries\scshape}}
+\makeatother
 
 \renewcommand{\baselinestretch}{1.15}
+
+\newcommand{\SectionLine}{
+    \vspace{0.4em}\noindent\rule{\textwidth}{1.8pt}\vspace{1.2em}
+}
 
 % ------------------ HEADER GRAFICO ------------------
 \newcommand{\CVHeader}{
@@ -55,9 +61,6 @@
     \textbf{Portfolio:} $dati_personali.portfolio$
 \end{minipage}
 
-\vspace{2em}
-\titlerule[2.4pt]
-\vspace{2em}
 }
 
 % =============================================================
@@ -84,7 +87,7 @@ $if(dettagli)$\emph{$dettagli$}$endif$
 $endfor$
 $endif$
 
-
+\SectionLine
 
 % ========================== ESPERIENZE ==========================
 $if(esperienze_professionali)$
@@ -102,7 +105,7 @@ $endif$
 $endfor$
 $endif$
 
-
+\SectionLine
 
 % ========================== DIDATTICA ==========================
 $if(insegnamento)$
@@ -116,7 +119,7 @@ Metodo: $metodologia$
 $endfor$
 $endif$
 
-
+\SectionLine
 
 % ========================== COMPETENZE ==========================
 $if(tool_digitali)$
@@ -155,7 +158,7 @@ $endif$
 
 $endif$
 
-
+\SectionLine
 
 % ========================== ATTIVITÀ CONCERTISTICA ==========================
 $if(attivita_concertistica)$
@@ -172,7 +175,7 @@ $if(note)$\emph{$note$}$endif$
 $endfor$
 $endif$
 
-
+\SectionLine
 
 % ========================== PUBBLICAZIONI / PROGETTI ==========================
 $if(pubblicazioni)$
@@ -203,6 +206,6 @@ $endif$
 
 $endif$
 
-
+\SectionLine
 
 \end{document}
