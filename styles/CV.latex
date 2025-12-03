@@ -6,10 +6,16 @@
 \documentclass[a4paper,11pt]{article}
 
 % ------------------ Stilistica generale ------------------
-\usepackage[a4paper,margin=1.8cm]{geometry}
-\usepackage{parskip}
-\setlength{\parindent}{0pt}
+\usepackage[a4paper,margin=1.5cm]{geometry}
 
+\usepackage{enumitem}
+\setlist[itemize]{leftmargin=1.5em,itemsep=0pt, parsep=0pt, topsep=0pt}
+
+\usepackage{ragged2e}
+\RaggedRight
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.1em}
 
 \usepackage{graphicx}
 \usepackage{array}
@@ -37,11 +43,11 @@
 \newcommand{\SectionLine}{
     \vspace{-0.5em}
     \noindent\rule{\textwidth}{1.4pt}
-    \vspace{1.5em}
+    \vspace{-0.5em}
 }
 
 \newcommand{\BigLine}{
-    \vspace{0.4em}\noindent\rule{\textwidth}{2pt}
+    \vspace{1.5em}\noindent\rule{\textwidth}{2pt}
 }
 
 
@@ -79,37 +85,45 @@
 
 $if(summary)$
 \section*{Profilo professionale}\SectionLine
-{\sloppy
-$summary$}
+
+$summary$
 $endif$
 
 
 % ========================== FORMAZIONE ==========================
 $if(istruzione)$
 \section*{Formazione}\SectionLine
+
 $for(istruzione)$
-\textbf{$it.titolo$} \hfill $it.anno$\\
-$it.istituto$\\
-$if(it.voto)$Voto: $it.voto$\\$endif$
-$if(it.dettagli)$\emph{$it.dettagli$}$endif$
-\vspace{1em}
+\textbf{$it.titolo$} \hfill {\itshape $it.anno$}\\[0pt]
+$it.istituto$\\[0pt]
+$if(it.voto)$
+$it.voto$\\[0pt]
+$endif$
+$if(it.tesi)$\emph{Tesi: $it.tesi$}\\[0pt]$endif$
+$if(it.docenti)$\emph{Docenti: $it.docenti$}\\[0pt]$endif$
+
+\vspace{1.5em}
 $endfor$
 $endif$
 
 
 
-% ========================== ESPERIENZE ==========================
+% ========================== ESPERIENZE PROFESSIONALI ==========================
 $if(esperienze_professionali)$
 \section*{Esperienze professionali}\SectionLine
+
 $for(esperienze_professionali)$
 \textbf{$it.organizzazione$} \hfill \emph{$it.periodo$}\\  
 Ruolo: $it.ruolo$\\$if(it.luogo)$
 Luogo: $it.luogo$\\
 $endif$                  
 $if(it.mansioni)$
-$for(it.mansioni)$                                        
-- $it.mansioni$\\
+\begin{itemize}
+$for(it.mansioni)$                                    
+\item $it$\\
 $endfor$
+\end{itemize}
 $endif$
 \vspace{1.2em}
 $endfor$
@@ -120,9 +134,13 @@ $endif$
 % ========================== DIDATTICA ==========================
 $if(insegnamento)$
 \section*{Insegnamento}\SectionLine
+
 $for(insegnamento)$
+
 \textbf{$it.istituto$} \hfill $it.periodo$\\
-$it.tipo$ — Target: $it.target$ — Partecipanti: $it.partecipanti$\\
+$it.tipo$\\
+Target: $it.target$\\
+Partecipanti: $it.partecipanti$\\
 Focus: \emph{$it.focus$}\\
 Metodo: $it.metodologia$
 \vspace{1.2em}
@@ -135,36 +153,49 @@ $endif$
 $if(tool_digitali)$
 \section*{Competenze Tecniche}\SectionLine
 
-$if(tool_digitali.linguaggi_programmazione)$
-Linguaggi:\\
-$for(tool_digitali.linguaggi_programmazione)$
-- $tool_digitali.linguaggi_programmazione$\\
-$endfor$
-\vspace{0.6em}
-$endif$
-
-$if(tool_digitali.ambienti_audio)$
-Ambienti Audio:\\
-$for(tool_digitali.ambienti_audio)$
-- $tool_digitali.ambienti_audio$\\
-$endfor$
-\vspace{0.6em}
-$endif$
-
+\noindent
+\begin{minipage}[t]{0.48\textwidth}
 $if(tool_digitali.strumenti_tecnici)$
-Strumenti Tecnici:\\
+\textbf{Strumenti Tecnici:}\\
+\begin{itemize}
 $for(tool_digitali.strumenti_tecnici)$
-- $tool_digitali.strumenti_tecnici$\\
+\item $tool_digitali.strumenti_tecnici$\\
 $endfor$
+\end{itemize}
 \vspace{0.6em}
 $endif$
 
 $if(tool_digitali.competenze_audio)$
-Competenze Audio:\\
+\textbf{Competenze Audio:}\\
+\begin{itemize}
 $for(tool_digitali.competenze_audio)$
-- $tool_digitali.competenze_audio$\\
+\item $tool_digitali.competenze_audio$\\
 $endfor$
+\end{itemize}
 $endif$
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+$if(tool_digitali.linguaggi_programmazione)$
+\textbf{Linguaggi:}\\
+\begin{itemize}
+$for(tool_digitali.linguaggi_programmazione)$
+\item $tool_digitali.linguaggi_programmazione$\\
+$endfor$
+\end{itemize}
+\vspace{0.6em}
+$endif$
+
+$if(tool_digitali.ambienti_audio)$
+\textbf{Ambienti Audio:}\\
+\begin{itemize}
+$for(tool_digitali.ambienti_audio)$
+\item $tool_digitali.ambienti_audio$\\
+$endfor$
+\end{itemize}
+\vspace{0.6em}
+$endif$
+\end{minipage}
 
 $endif$
 
@@ -173,7 +204,9 @@ $endif$
 % ========================== ATTIVITÀ CONCERTISTICA ==========================
 $if(attivita_concertistica)$
 \section*{Attività Concertistica}\SectionLine
+
 $for(attivita_concertistica)$
+
 \textbf{$it.evento$} \hfill $it.data$\\
 $it.venue$ — $it.organizzatore$\\
 Titolo: \emph{$it.titolo$} $if(it.tipo)$($it.tipo$)$endif$\\

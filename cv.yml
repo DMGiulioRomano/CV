@@ -13,7 +13,7 @@ dati_personali:
   foto: "assets/fotoInfinitiPossibili.jpeg"
   nazionalita: "Italiana"
 
-summary: "Compositore e live electronics specializzato in spazializzazione multicanale e regia del suono per musica contemporanea. Ho curato prime assolute e catene elettroacustiche in contesti istituzionali (ArteScienza/CRM, Conservatori S. Cecilia e A. Casella), con focus su feedback e interazione spazio--ambiente. Produco tool audio in Max/MSP, Pure Data, JUCE e workflow documentati open source."
+summary: "Compositore e live electronics specializzato in spazializzazione multicanale e regia del suono per musica contemporanea. Ho curato prime assolute e catene elettroacustiche in contesti istituzionali (ArteScienza/ CRM, Conservatori S. Cecilia e A. Casella), con focus su feedback e interazione spazio--ambiente. Produco tool audio in Max/MSP, Pure Data, JUCE e workflow documentati open source."
 
 lingue:
   - Italiano: madrelingua
@@ -24,17 +24,16 @@ istruzione:
   - anno: "In corso"
     istituto: "Conservatorio \"A. Casella\", L'Aquila"
     titolo: "Laureando II livello, Musica Elettronica"
-    voto: "-"
-    dettagli: ""
   - anno: "2023"
     istituto: "Conservatorio \"S. Cecilia\", Roma"
     titolo: "Diploma I livello, Musica Elettronica"
     voto: "108/110"
-    dettagli: "Tesi: Rapporto compositore-interprete nella musica elettroacustica. Docenti: N. Bernardini, G. Silvi"
+    tesi: "Rapporto compositore-interprete nella musica elettroacustica." 
+    docenti: "N. Bernardini, G. Silvi"
   - anno: "2018"
     istituto: "Liceo Classico  \"Luciano Manara\", Roma"
     titolo: "Scuola secondaria di I grado"
-    voto: "71/100"
+    #voto: "71/100"
 
 esperienze_professionali:
   - periodo: "06/2023 -- oggi"
