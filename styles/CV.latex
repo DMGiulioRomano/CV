@@ -10,8 +10,6 @@
 \usepackage{parskip}
 \setlength{\parindent}{0pt}
 
-\usepackage{fontspec}
-\setmainfont{Times New Roman}
 
 \usepackage{graphicx}
 \usepackage{array}
@@ -29,38 +27,47 @@
 \makeatletter
 \renewcommand\section{
     \@startsection{section}{1}{0pt}%
-    {1.2em}%
-    {0.8em}%
-    {\large\bfseries\scshape}}
+    {2em}%
+    {0.1em}%
+    {\large\bfseries\scshape\MakeUppercase}}
 \makeatother
 
 \renewcommand{\baselinestretch}{1.15}
 
 \newcommand{\SectionLine}{
-    \vspace{0.4em}\noindent\rule{\textwidth}{1.8pt}\vspace{1.2em}
+    \vspace{-0.5em}
+    \noindent\rule{\textwidth}{1.4pt}
+    \vspace{1.5em}
 }
+
+\newcommand{\BigLine}{
+    \vspace{0.4em}\noindent\rule{\textwidth}{2pt}
+}
+
 
 % ------------------ HEADER GRAFICO ------------------
 \newcommand{\CVHeader}{
-
+\raisebox{-.85\height}{%  ← allinea la foto in alto
 \begin{minipage}[t]{0.27\textwidth}
     $if(dati_personali.foto)$
+
     \fboxsep=0pt
     \fbox{\includegraphics[width=\linewidth]{$dati_personali.foto$}}
     $endif$
-\end{minipage}
+\end{minipage}%
+}
 \hfill
 \begin{minipage}[t]{0.70\textwidth}
+    \linespread{1.3}\selectfont
     {\Huge\bfseries $dati_personali.nome$}\\[4pt]
-    {\large $dati_personali.ruolo$}\\[10pt]
-
-    $dati_personali.indirizzo$, $dati_personali.citta$\\
-    Nato il $dati_personali.data_nascita$ — $dati_personali.nazionalita$\\
-    Tel: $dati_personali.telefono$\\
-    Email: \href{mailto:$dati_personali.email$}{$dati_personali.email$}\\
-    \textbf{Portfolio:} $dati_personali.portfolio$
+    {\large \itshape $dati_personali.ruolo$}\\[10pt]
+    {\bfseries Indirizzo:} $dati_personali.indirizzo$, $dati_personali.citta$\\
+    {\bfseries Nato il:} $dati_personali.data_nascita$ — $dati_personali.citta$\\
+    {\bfseries Telefono:} $dati_personali.telefono$\\
+    {\bfseries Email:}  \href{$dati_personali.email$}{$dati_personali.email$}\\
+    {\bfseries Github:} \href{$dati_personali.github$}{$dati_personali.github$}\\
+    {\bfseries Lavori musicali:} \href{$dati_personali.soundcloud$}{$dati_personali.soundcloud$}\\
 \end{minipage}
-
 }
 
 % =============================================================
@@ -68,62 +75,65 @@
 
 \CVHeader
 
-$if(summary)$
-\section*{Profilo}
-$summary$
-$endif$
+\BigLine
 
+$if(summary)$
+\section*{Profilo professionale}\SectionLine
+{\sloppy
+$summary$}
+$endif$
 
 
 % ========================== FORMAZIONE ==========================
 $if(istruzione)$
-\section*{Formazione}
+\section*{Formazione}\SectionLine
 $for(istruzione)$
-\textbf{$titolo$} \hfill $anno$\\
-$istituto$\\
-$if(voto)$Voto: $voto$\\$endif$
-$if(dettagli)$\emph{$dettagli$}$endif$
+\textbf{$it.titolo$} \hfill $it.anno$\\
+$it.istituto$\\
+$if(it.voto)$Voto: $it.voto$\\$endif$
+$if(it.dettagli)$\emph{$it.dettagli$}$endif$
 \vspace{1em}
 $endfor$
 $endif$
 
-\SectionLine
+
 
 % ========================== ESPERIENZE ==========================
 $if(esperienze_professionali)$
-\section*{Esperienze Professionali}
+\section*{Esperienze professionali}\SectionLine
 $for(esperienze_professionali)$
-\textbf{$organizzazione$} \hfill \emph{$periodo$}\\
-Ruolo: $ruolo$\\
-$if(luogo)$Luogo: $luogo$\\$endif$
-$if(mansioni)$
-$for(mansioni)$
-- $mansioni$\\
+\textbf{$it.organizzazione$} \hfill \emph{$it.periodo$}\\  
+Ruolo: $it.ruolo$\\$if(it.luogo)$
+Luogo: $it.luogo$\\
+$endif$                  
+$if(it.mansioni)$
+$for(it.mansioni)$                                        
+- $it.mansioni$\\
 $endfor$
 $endif$
 \vspace{1.2em}
 $endfor$
 $endif$
 
-\SectionLine
+
 
 % ========================== DIDATTICA ==========================
 $if(insegnamento)$
-\section*{Insegnamento}
+\section*{Insegnamento}\SectionLine
 $for(insegnamento)$
-\textbf{$istituto$} \hfill $periodo$\\
-$tipo$ — Target: $target$ — Partecipanti: $partecipanti$\\
-Focus: \emph{$focus$}\\
-Metodo: $metodologia$
+\textbf{$it.istituto$} \hfill $it.periodo$\\
+$it.tipo$ — Target: $it.target$ — Partecipanti: $it.partecipanti$\\
+Focus: \emph{$it.focus$}\\
+Metodo: $it.metodologia$
 \vspace{1.2em}
 $endfor$
 $endif$
 
-\SectionLine
+
 
 % ========================== COMPETENZE ==========================
 $if(tool_digitali)$
-\section*{Competenze Tecniche}
+\section*{Competenze Tecniche}\SectionLine
 
 $if(tool_digitali.linguaggi_programmazione)$
 Linguaggi:\\
@@ -158,54 +168,53 @@ $endif$
 
 $endif$
 
-\SectionLine
+
 
 % ========================== ATTIVITÀ CONCERTISTICA ==========================
 $if(attivita_concertistica)$
-\section*{Attività Concertistica}
+\section*{Attività Concertistica}\SectionLine
 $for(attivita_concertistica)$
-\textbf{$evento$} \hfill $data$\\
-$venue$ — $organizzatore$\\
-Titolo: \emph{$titolo$} $if(tipo)$($tipo$)$endif$\\
-Ruolo: \textbf{$ruolo$}\\
-$if(organico)$Organico: $organico$\\$endif$
-$if(collaboratori)$Collaboratori: $collaboratori$\\$endif$
-$if(note)$\emph{$note$}$endif$
+\textbf{$it.evento$} \hfill $it.data$\\
+$it.venue$ — $it.organizzatore$\\
+Titolo: \emph{$it.titolo$} $if(it.tipo)$($it.tipo$)$endif$\\
+Ruolo: \textbf{$it.ruolo$}\\
+$if(it.organico)$Organico: $it.organico$\\$endif$
+$if(it.collaboratori)$Collaboratori: $it.collaboratori$\\$endif$
+$if(it.note)$\emph{$it.note$}$endif$
 \vspace{1.3em}
 $endfor$
 $endif$
 
-\SectionLine
+
 
 % ========================== PUBBLICAZIONI / PROGETTI ==========================
 $if(pubblicazioni)$
-\section*{Progetti e Pubblicazioni}
+\section*{Progetti e Pubblicazioni}\SectionLine
 
 $if(pubblicazioni.progetti_personali)$
 $for(pubblicazioni.progetti_personali)$
-\textbf{$nome$} — $tipo$\\
-Ruolo: $ruolo$\\
-$descrizione$\\
-Focus: $focus$\\
-\textit{Sedi:} $sedi$\\
-Metodo: $metodologia$\\
-Obiettivi: $obiettivi$
+\textbf{$it.nome$} — $it.tipo$\\
+Ruolo: $it.ruolo$\\
+$it.descrizione$\\
+Focus: $it.focus$\\
+\textit{Sedi:} $it.sedi$\\
+Metodo: $it.metodologia$\\
+Obiettivi: $it.obiettivi$
 \vspace{1.3em}
 $endfor$
 $endif$
 
 $if(pubblicazioni.competenze_relazionali)$
 $for(pubblicazioni.competenze_relazionali)$
-\textbf{$progetto$} — $ruolo$\\
-Sede: $sede$\\
-Competenze: $competenze$\\
-Team: $team$
+\textbf{$it.progetto$} — $it.ruolo$\\
+Sede: $it.sede$\\
+Competenze: $it.competenze$\\
+Team: $it.team$
 \vspace{1.3em}
 $endfor$
 $endif$
 
 $endif$
 
-\SectionLine
 
 \end{document}

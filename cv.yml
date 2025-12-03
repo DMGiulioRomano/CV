@@ -8,7 +8,8 @@ dati_personali:
   citta: "Roma"
   telefono: "+39 342 3232 342"
   email: "giuliodemattia21@gmail.com"
-  portfolio: "https://github.com/DMGiulioRomano \\\\ https://soundcloud.com/giulio-romano-de-mattia"
+  github: "https://github.com/DMGiulioRomano"
+  soundcloud: "https://soundcloud.com/giulio-romano-de-mattia"
   foto: "assets/fotoInfinitiPossibili.jpeg"
   nazionalita: "Italiana"
 
@@ -20,20 +21,20 @@ lingue:
   - Tedesco: A2
 
 istruzione:
-  - anno: "2018"
-    istituto: "Liceo Classico  \"Luciano Manara\", Roma"
-    titolo: "Scuola secondaria di I grado"
-    voto: "71/100"
-  - anno: "2023"
-    istituto: "Conservatorio \"S. Cecilia\", Roma"
-    titolo: "Diploma I livello, Musica Elettronica"
-    voto: "108/110"
-    dettagli: "Tesi: Rapporto compositore-interprete nella musica elettroacustica. Docenti: N. Bernardini, G. Silvi"
   - anno: "In corso"
     istituto: "Conservatorio \"A. Casella\", L'Aquila"
     titolo: "Laureando II livello, Musica Elettronica"
     voto: "-"
     dettagli: ""
+  - anno: "2023"
+    istituto: "Conservatorio \"S. Cecilia\", Roma"
+    titolo: "Diploma I livello, Musica Elettronica"
+    voto: "108/110"
+    dettagli: "Tesi: Rapporto compositore-interprete nella musica elettroacustica. Docenti: N. Bernardini, G. Silvi"
+  - anno: "2018"
+    istituto: "Liceo Classico  \"Luciano Manara\", Roma"
+    titolo: "Scuola secondaria di I grado"
+    voto: "71/100"
 
 esperienze_professionali:
   - periodo: "06/2023 -- oggi"
