@@ -24,7 +24,7 @@ jobs:
         apt-get install -y git python3-pip fonts-liberation wget
         pip install pyyaml
         tlmgr update --self
-        tlmgr install enumitem
+        tlmgr install enumitem wrapfig
         
         # Download in parallelo (background jobs)
         PANDOC_VERSION=3.8.2
