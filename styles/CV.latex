@@ -1,0 +1,208 @@
+% =============================================================
+%  CV - GIULIO ROMANO DE MATTIA
+%  Versione estetica definitiva per Pandoc + XeLaTeX
+% =============================================================
+
+\documentclass[a4paper,11pt]{article}
+
+% ------------------ Stilistica generale ------------------
+\usepackage[a4paper,margin=1.8cm]{geometry}
+\usepackage{parskip}
+\setlength{\parindent}{0pt}
+
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{wrapfig}
+
+\hypersetup{
+    colorlinks=true,
+    urlcolor=black,
+    linkcolor=black
+}
+
+% ------------------ Stile sezioni ------------------
+\titleformat{\section}
+    {\large\bfseries\scshape}
+    {}{0pt}{}
+[\vspace{-0.3em}\titlerule[1.8pt]\vspace{1.2em}]
+
+\renewcommand{\baselinestretch}{1.15}
+
+% ------------------ HEADER GRAFICO ------------------
+\newcommand{\CVHeader}{
+
+\begin{minipage}[t]{0.27\textwidth}
+    $if(dati_personali.foto)$
+    \fboxsep=0pt
+    \fbox{\includegraphics[width=\linewidth]{$dati_personali.foto$}}
+    $endif$
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.70\textwidth}
+    {\Huge\bfseries $dati_personali.nome$}\\[4pt]
+    {\large $dati_personali.ruolo$}\\[10pt]
+
+    $dati_personali.indirizzo$, $dati_personali.citta$\\
+    Nato il $dati_personali.data_nascita$ — $dati_personali.nazionalita$\\
+    Tel: $dati_personali.telefono$\\
+    Email: \href{mailto:$dati_personali.email$}{$dati_personali.email$}\\
+    \textbf{Portfolio:} $dati_personali.portfolio$
+\end{minipage}
+
+\vspace{2em}
+\titlerule[2.4pt]
+\vspace{2em}
+}
+
+% =============================================================
+\begin{document}
+
+\CVHeader
+
+$if(summary)$
+\section*{Profilo}
+$summary$
+$endif$
+
+
+
+% ========================== FORMAZIONE ==========================
+$if(istruzione)$
+\section*{Formazione}
+$for(istruzione)$
+\textbf{$titolo$} \hfill $anno$\\
+$istituto$\\
+$if(voto)$Voto: $voto$\\$endif$
+$if(dettagli)$\emph{$dettagli$}$endif$
+\vspace{1em}
+$endfor$
+$endif$
+
+
+
+% ========================== ESPERIENZE ==========================
+$if(esperienze_professionali)$
+\section*{Esperienze Professionali}
+$for(esperienze_professionali)$
+\textbf{$organizzazione$} \hfill \emph{$periodo$}\\
+Ruolo: $ruolo$\\
+$if(luogo)$Luogo: $luogo$\\$endif$
+$if(mansioni)$
+$for(mansioni)$
+- $mansioni$\\
+$endfor$
+$endif$
+\vspace{1.2em}
+$endfor$
+$endif$
+
+
+
+% ========================== DIDATTICA ==========================
+$if(insegnamento)$
+\section*{Insegnamento}
+$for(insegnamento)$
+\textbf{$istituto$} \hfill $periodo$\\
+$tipo$ — Target: $target$ — Partecipanti: $partecipanti$\\
+Focus: \emph{$focus$}\\
+Metodo: $metodologia$
+\vspace{1.2em}
+$endfor$
+$endif$
+
+
+
+% ========================== COMPETENZE ==========================
+$if(tool_digitali)$
+\section*{Competenze Tecniche}
+
+$if(tool_digitali.linguaggi_programmazione)$
+Linguaggi:\\
+$for(tool_digitali.linguaggi_programmazione)$
+- $tool_digitali.linguaggi_programmazione$\\
+$endfor$
+\vspace{0.6em}
+$endif$
+
+$if(tool_digitali.ambienti_audio)$
+Ambienti Audio:\\
+$for(tool_digitali.ambienti_audio)$
+- $tool_digitali.ambienti_audio$\\
+$endfor$
+\vspace{0.6em}
+$endif$
+
+$if(tool_digitali.strumenti_tecnici)$
+Strumenti Tecnici:\\
+$for(tool_digitali.strumenti_tecnici)$
+- $tool_digitali.strumenti_tecnici$\\
+$endfor$
+\vspace{0.6em}
+$endif$
+
+$if(tool_digitali.competenze_audio)$
+Competenze Audio:\\
+$for(tool_digitali.competenze_audio)$
+- $tool_digitali.competenze_audio$\\
+$endfor$
+$endif$
+
+$endif$
+
+
+
+% ========================== ATTIVITÀ CONCERTISTICA ==========================
+$if(attivita_concertistica)$
+\section*{Attività Concertistica}
+$for(attivita_concertistica)$
+\textbf{$evento$} \hfill $data$\\
+$venue$ — $organizzatore$\\
+Titolo: \emph{$titolo$} $if(tipo)$($tipo$)$endif$\\
+Ruolo: \textbf{$ruolo$}\\
+$if(organico)$Organico: $organico$\\$endif$
+$if(collaboratori)$Collaboratori: $collaboratori$\\$endif$
+$if(note)$\emph{$note$}$endif$
+\vspace{1.3em}
+$endfor$
+$endif$
+
+
+
+% ========================== PUBBLICAZIONI / PROGETTI ==========================
+$if(pubblicazioni)$
+\section*{Progetti e Pubblicazioni}
+
+$if(pubblicazioni.progetti_personali)$
+$for(pubblicazioni.progetti_personali)$
+\textbf{$nome$} — $tipo$\\
+Ruolo: $ruolo$\\
+$descrizione$\\
+Focus: $focus$\\
+\textit{Sedi:} $sedi$\\
+Metodo: $metodologia$\\
+Obiettivi: $obiettivi$
+\vspace{1.3em}
+$endfor$
+$endif$
+
+$if(pubblicazioni.competenze_relazionali)$
+$for(pubblicazioni.competenze_relazionali)$
+\textbf{$progetto$} — $ruolo$\\
+Sede: $sede$\\
+Competenze: $competenze$\\
+Team: $team$
+\vspace{1.3em}
+$endfor$
+$endif$
+
+$endif$
+
+
+
+\end{document}
