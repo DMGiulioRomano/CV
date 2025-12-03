@@ -1,11 +1,234 @@
-author: "Mario Rossi"
-date: "15/07/2025"
-documentclass: article
-fontsize: 12pt
-toc: true
-toc-depth: 2
-csl: styles/consAq-author-date.csl
-nocite: "@*"
-mainfont:
-sansfont:
-monofont:
+# CV Data - Giulio Romano De Mattia
+---
+dati_personali:
+  nome: "Giulio Romano De Mattia"
+  ruolo: "Compositore e Live Electronics"
+  data_nascita: "12/03/2000"
+  indirizzo: "Via della Lungara 81C"
+  citta: "Roma"
+  telefono: "+39 342 3232 342"
+  email: "giuliodemattia21@gmail.com"
+  portfolio: "https://github.com/DMGiulioRomano \\\\ https://soundcloud.com/giulio-romano-de-mattia"
+  foto: "img/fotoInfinitiPossibili"
+  nazionalita: "Italiana"
+
+summary: "Compositore e live electronics specializzato in spazializzazione multicanale e regia del suono per musica contemporanea. Ho curato prime assolute e catene elettroacustiche in contesti istituzionali (ArteScienza/CRM, Conservatori S. Cecilia e A. Casella), con focus su feedback e interazione spazio--ambiente. Produco tool audio in Max/MSP, Pure Data, JUCE e workflow documentati open source."
+
+lingue:
+  - Italiano: madrelingua
+  - Inglese: C1
+  - Tedesco: A2
+
+istruzione:
+  - anno: "2018"
+    istituto: "Liceo Classico  \"Luciano Manara\", Roma"
+    titolo: "Scuola secondaria di I grado"
+    voto: "71/100"
+  - anno: "2023"
+    istituto: "Conservatorio \"S. Cecilia\", Roma"
+    titolo: "Diploma I livello, Musica Elettronica"
+    voto: "108/110"
+    dettagli: "Tesi: Rapporto compositore-interprete nella musica elettroacustica. Docenti: N. Bernardini, G. Silvi"
+  - anno: "In corso"
+    istituto: "Conservatorio \"A. Casella\", L'Aquila"
+    titolo: "Laureando II livello, Musica Elettronica"
+    voto: "-"
+    dettagli: ""
+
+esperienze_professionali:
+  - periodo: "06/2023 -- oggi"
+    organizzazione: "ArteScienza / CRM (Centro Ricerche Musicali), Roma"
+    ruolo: "Assistente tecnico-musicale"
+    luogo: "Goethe-Institut"
+    mansioni:
+      - "Regia del suono e live electronics per prime assolute"
+      - "Ottimizzazione acustica sala/installazioni"
+      - "Assistenza al coordinamento e alla direzione artistica"
+  
+  - periodo: "10-11/2023"
+    organizzazione: "Easylight S.R.L."
+    ruolo: "Fonico e tecnico luci"
+    mansioni:
+      - "FOH per conferenze/spettacoli (platea 150-400 persone)"
+      - "Inventariazione e controllo attrezzature, ripristino asset in 24h"
+      - "Supporto lighting (10 fixture)"  
+
+insegnamento:
+  - periodo: "10/2024 -- oggi"
+    istituto: "Il Girasole Srl"
+    tipo: "Laboratorio musicale Infanzia"
+    target: "Bambini 3-5 anni"
+    partecipanti: "8-12"
+    focus: "Laboratorio timbrico, ascolto attivo, musica contemporanea"
+    metodologia: "Attività interattive per sviluppo senso ritmico e percezione musicale"
+
+  - periodo: "02/2025 -- 06/2025"
+    istituto: "Scuole Medie D. Buzzati"
+    tipo: "Laboratorio musicale Medie"
+    target: "Bambini 11-14 anni"
+    bando_vinto: "Scuole Aperte"
+    partecipanti: "10"
+    focus: "Laboratorio di ascolto attivo, musica contemporanea"
+    metodologia: "Attività interattive per sviluppo senso ritmico e percezione musicale"
+
+tool_digitali:
+  linguaggi_programmazione:
+    - "C, C++"
+    - "Python"
+    - "JavaScript"
+  
+  ambienti_audio:
+    - "Max/MSP"
+    - "Pure Data"
+    - "CSound"
+    - "JUCE (VST/plug-in development)"
+  
+  strumenti_tecnici:
+    - "GNU Octave (calcolo numerico per audio)"
+    - "GNU Make (automazione processi)"
+    - "LaTeX (documentazione tecnica)"
+  
+  competenze_audio:
+    - "Live electronics e spazializzazione (Ambisonics, MS)"
+    - "Regia del suono per ensemble e acusmatico"
+    - "Progettazione catene elettroacustiche e feedback systems"
+    - "Sviluppo tool audio (Max/MSP, PD, JUCE)"
+    - "Misure acustiche e calibrazione multicanale"
+    - "Documentazione tecnica e release open source"
+
+attivita_concertistica:
+  - data: "11/07/2023"
+    venue: "Goethe-Institut, Roma"
+    organizzatore: "ArteScienza/CRM"
+    evento: "Concerto Acusmatico"
+    titolo: "AEDI: A Memory Mistake (Giulio Romano De Mattia)"
+    tipo: "(prima assoluta)"
+    organico: "Acusmatico"
+    ruolo: "Compositore, regia del suono"
+    note: "CONCERTO ACUSMATICO - Setup multicanale con installazione sonora Olofoni di Michelangelo Lupone"
+  
+  - data: "01/03/2024"
+    venue: "Conservatorio S. Cecilia, Roma"
+    organizzatore: "Conservatorio S. Cecilia"
+    evento: "Concerto INFINITI POSSIBILI"
+    titolo: "AEDI: Transience (Giulio Romano De Mattia)"
+    tipo: "(prima assoluta)"
+    ruolo: "Compositore, regia del suono"
+    organico: "Clarinetto Basso (Alice Cortegiani)"
+  
+  - data: "13/07/2024"
+    venue: "Goethe-Institut, Roma"
+    organizzatore: "ArteScienza/CRM"
+    evento: "LAZZARO13072024"
+    titolo: "Post-Prae-Ludium per Donau (Luigi Nono, 1987)"
+    tipo: "Repertorio"
+    organico: "Euphonium (Marina Boselli), Live Electronics"
+    ruolo: "Live Electronics"
+    collaboratori: "Francesco Ferracuti"
+  
+  - data: "18/09/2024"
+    venue: "Goethe-Institut, Roma"
+    organizzatore: "ArteScienza/CRM, LEAP"
+    evento: "ALLA PERIFERIA DELL'IMPERO - Autoprogettazione di un Ascolto"
+    titolo: "Jolt (Giulio Romano De Mattia)"
+    tipo: "(prima assoluta)"
+    organico: "Campana tibetana (Marco Di Gasbarro), Live Electronics"
+    ruolo: "Compositore, Live Electronics"
+    note: "Curato da Francesco Vitucci e LEAP"
+  
+  - data: "19/09/2024"
+    venue: "Liceo Quirino Visconti, Roma"
+    organizzatore: "CRM, Liceo Visconti"
+    evento: "Toccare L'invisibile"
+    tipo: "Progetto collaborativo"
+    organico: "Flux (Francesco Ferracuti), Live Electronics (Giulio De Mattia), CAGE (Davide Tedesco), direzione (Michelangelo Lupone) "
+    ruolo: "Musicista, Live Electronics"
+    note: "Progetto tra Liceo Visconti e Centro Ricerche Musicali"
+  
+  - data: "10/10/2024"
+    venue: "Conservatorio A. Casella, L'Aquila"
+    organizzatore: "ElettroAQustica 2024"
+    evento: "LAZZARO10102024"
+    titolo: "À Pierre. Dell'azzurro silenzio, inquietum (Luigi Nono)"
+    tipo: "Repertorio"
+    organico: "Flauto Contrabbasso (Giuseppe Silvi), Clarinetto Contrabbasso (Alice Cortegiani), Live Electronics"
+    ruolo: "Live Electronics"
+    note: "Integrazione catena elettroacustica"
+  
+  - data: "11/10/2024"
+    venue: "Conservatorio A. Casella, L'Aquila"
+    organizzatore: "ElettroAQustica 2024"
+    evento: "Generazioni Elettroacustiche"
+    titolo: "AEDI: Transience (Giulio Romano De Mattia)"
+    organico: "Clarinetto Contrabbasso (Alice Cortegiani), Tape"
+    ruolo: "Compositore, regia del suono"
+    tipo: "Repertorio"
+
+  - data: "11/10/2024"
+    venue: "Conservatorio A. Casella, L'Aquila"
+    organizzatore: "ElettroAQustica 2024"
+    evento: "Generazioni Elettroacustiche"
+    titolo: "Saxony (James Tenney)"
+    organico: "Clarinetto Contrabbasso, Live Electronics"
+    ruolo: "Live Electronics, regia del suono"
+    tipo: "Repertorio"
+
+
+  - data: "19/12/2024"
+    venue: "La Pelanda, Ex Mattatoio, Roma"
+    organizzatore: "Nuova Consonanza"
+    evento: "Umano Post Umano (Agostino Di Scipio)"
+    tipo: "(Prima assoluta)"
+    ruolo: "Tecnico musicale, regia del suono dell'installazione"
+    organico: "Tam e catena elettroacustica specifica"
+  
+  - data: "20/01/2025"
+    venue: "Auditorium Parco della Musica Ennio Morricone, Roma"
+    organizzatore: "PMCE"
+    evento: "Playing with Gavin Bryars"
+    titolo: "Viaggio in compagnia di Gavin Bryars"
+    tipo: "(prima assoluta)"
+    collaboratori: "Raiz, Conservatori del Territorio"
+    organico: "Brano per Orchestra"
+    compositori: "Nicola Gaeta, Francesco Latorraca, Federico Lavista, Gianmarco Tuzi, Giulio Romano De Mattia"
+    ruolo: "Co-compositore"
+
+  - data: "29/03/2025"
+    venue: "Auditorium “E. Morricone”, Università di Roma “Tor Vergata”, Macroarea di Lettere e Filosofia"
+    organizzatore: "Dipartimento di Storia, Patrimonio culturale, Formazione e Societa’"
+    evento: "Le Forme del Suono Elettroacustico"
+    titolo: "Studio Bicamerale n. 2 (Francesco Ferracuti)"
+    tipo: "Repertorio"
+    organico: "Flauto aumentato (Francesco Ferracuti) e Live Electronics (Giulio Romano De Mattia)"
+    ruolo: "Live Electronics"
+    note: "Direzione artistica: Giovanni Costantini e Giorgio Nottoli"
+
+  - data: "10/07/2025"
+    venue: "MUSA Museo Degli Strumenti Musicali, Parco della Musica Ennio Morricone, Roma"
+    organizzatore: "ArteScienza/CRM"
+    evento: "INCONTRI"
+    titolo: "GAMMA (Giulio Romano De Mattia)"
+    tipo: "(prima assoluta)"
+    organico: "Acusmatico"
+    ruolo: "Compositore, regia del suono"
+    note: "CONCERTO ACUSMATICO - Setup multicanale con Altoparlanti Tetraedrici S.T.One di Giuseppe Silvi"
+
+
+
+pubblicazioni:
+  progetti_personali:
+    - nome: "Gruppo $z^{-1}$"
+      tipo: "Polo musicisti"
+      ruolo: "Membro fondatore"
+      descrizione: "Gruppo composto da musicisti dalla Scuola di Musica Elettronica Romana"
+      focus: "Organizzazione e realizzazione di concerti"
+      sedi: "BEAM Bottega ElettroAcustica Musicale"
+      metodologia: "Approccio open source, sperimentazione e ricerca collettiva"
+      obiettivi: "Creazione strumenti digitali ed elettroacustici, esperienza sonora collettiva"
+  
+  competenze_relazionali:
+    - progetto: "Infiniti Possibili"
+      ruolo: "Direttore artistico"
+      sede: "Conservatorio Santa Cecilia, Roma"
+      competenze: "Coordinamento, suddivisione compiti, comunicazione interdisciplinare, gestione dinamiche di gruppo, risoluzione conflitti"
+      team: "20 persone"
