@@ -24,6 +24,7 @@ istruzione:
   - anno: "In corso"
     istituto: "Conservatorio \"A. Casella\", L'Aquila"
     titolo: "Laureando II livello, Musica Elettronica"
+    docenti: "Agostino Di Scipio"
   - anno: "2023"
     istituto: "Conservatorio \"S. Cecilia\", Roma"
     titolo: "Diploma I livello, Musica Elettronica"
@@ -36,7 +37,7 @@ istruzione:
     #voto: "71/100"
 
 esperienze_professionali:
-  - periodo: "06/2023 -- oggi"
+  - periodo: "06/2022 -- oggi"
     organizzazione: "ArteScienza / CRM (Centro Ricerche Musicali), Roma"
     ruolo: "Assistente tecnico-musicale"
     luogo: "Goethe-Institut"
@@ -153,7 +154,6 @@ attivita_concertistica:
     tipo: "Repertorio"
     organico: "Flauto Contrabbasso (Giuseppe Silvi), Clarinetto Contrabbasso (Alice Cortegiani), Live Electronics"
     ruolo: "Live Electronics"
-    note: "Integrazione catena elettroacustica"
   
   - data: "11/10/2024"
     venue: "Conservatorio A. Casella, L'Aquila"
@@ -184,11 +184,11 @@ attivita_concertistica:
   
   - data: "20/01/2025"
     venue: "Auditorium Parco della Musica Ennio Morricone, Roma"
-    organizzatore: "PMCE"
+    organizzatore: "PMCE, stagione concertistica di musica contemporanea"
     evento: "Playing with Gavin Bryars"
     titolo: "Viaggio in compagnia di Gavin Bryars"
     tipo: "(prima assoluta)"
-    collaboratori: "Raiz, Conservatori del Territorio"
+    collaboratori: "Raiz, PMCE"
     organico: "Brano per Orchestra"
     compositori: "Nicola Gaeta, Francesco Latorraca, Federico Lavista, Gianmarco Tuzi, Giulio Romano De Mattia"
     ruolo: "Co-compositore"

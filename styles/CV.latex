@@ -41,9 +41,9 @@
 \renewcommand{\baselinestretch}{1.15}
 
 \newcommand{\SectionLine}{
-    \vspace{-0.5em}
+    \vspace{-0.7em}
     \noindent\rule{\textwidth}{1.4pt}
-    \vspace{-0.5em}
+    \vspace{-0.7em}
 }
 
 \newcommand{\BigLine}{
@@ -131,13 +131,13 @@ $endif$
 
 
 
-% ========================== DIDATTICA ==========================
+% ========================== INSEGNAMENTO ==========================
 $if(insegnamento)$
 \section*{Insegnamento}\SectionLine
 
 $for(insegnamento)$
 
-\textbf{$it.istituto$} \hfill $it.periodo$\\
+\textbf{$it.istituto$} \hfill {\itshape $it.periodo$}\\
 $it.tipo$\\
 Target: $it.target$\\
 Partecipanti: $it.partecipanti$\\
@@ -207,7 +207,7 @@ $if(attivita_concertistica)$
 
 $for(attivita_concertistica)$
 
-\textbf{$it.evento$} \hfill $it.data$\\
+\textbf{$it.evento$} \hfill {\itshape $it.data$}\\
 $it.venue$ — $it.organizzatore$\\
 Titolo: \emph{$it.titolo$} $if(it.tipo)$$it.tipo$$endif$\\
 Ruolo: \textbf{$it.ruolo$}\\
