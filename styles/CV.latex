@@ -209,7 +209,7 @@ $for(attivita_concertistica)$
 
 \textbf{$it.evento$} \hfill $it.data$\\
 $it.venue$ — $it.organizzatore$\\
-Titolo: \emph{$it.titolo$} $if(it.tipo)$($it.tipo$)$endif$\\
+Titolo: \emph{$it.titolo$} $if(it.tipo)$$it.tipo$$endif$\\
 Ruolo: \textbf{$it.ruolo$}\\
 $if(it.organico)$Organico: $it.organico$\\$endif$
 $if(it.collaboratori)$Collaboratori: $it.collaboratori$\\$endif$
