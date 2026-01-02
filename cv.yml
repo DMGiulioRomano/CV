@@ -35,6 +35,9 @@ istruzione:
     istituto: "Liceo Classico  \"Luciano Manara\", Roma"
     titolo: "Scuola secondaria di I grado"
     #voto: "71/100"
+  - anno: "2025"
+    istituto: "Rīga - Liepāja (Latvia)"
+    titolo: "IRCAM Forum Workshops 2025"
 
 esperienze_professionali:
   - periodo: "06/2022 -- oggi"
@@ -71,6 +74,16 @@ insegnamento:
     partecipanti: "10"
     focus: "Laboratorio di ascolto attivo, musica contemporanea"
     metodologia: "Attività interattive per sviluppo senso ritmico e percezione musicale"
+
+  - periodo: "10/2025 -- oggi"
+    istituto: "Scuola Primaria Giuseppe Garibaldi"
+    tipo: "Laboratorio musicale Infanzia"
+    target: "Bambini 3-5 anni"
+    bando_vinto: "Scuole Aperte"
+    partecipanti: "12-16"
+    focus: "Laboratorio di ascolto attivo, musica contemporanea"
+    metodologia: "Attività interattive per sviluppo senso ritmico e percezione musicale"
+
 
 tool_digitali:
   linguaggi_programmazione:
@@ -214,7 +227,6 @@ attivita_concertistica:
     note: "CONCERTO ELETTROACUSTICO - Setup multicanale con Altoparlanti Tetraedrici S.T.One di Giuseppe Silvi"
 
 
-
 pubblicazioni:
   progetti_personali:
     - nome: "Gruppo $z^{-1}$"
@@ -225,6 +237,11 @@ pubblicazioni:
       sedi: "BEAM Bottega ElettroAcustica Musicale"
       metodologia: "Approccio open source, sperimentazione e ricerca collettiva"
       obiettivi: "Creazione strumenti digitali ed elettroacustici, esperienza sonora collettiva"
+
+    - nome: "HardCoro di Zalib"
+      tipo: "Coro"
+      ruolo: "Corista - tenore"
+      descrizione: "Coro auto-organizzato"
   
   competenze_relazionali:
     - progetto: "Infiniti Possibili"
