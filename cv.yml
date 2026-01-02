@@ -71,7 +71,7 @@ insegnamento:
     tipo: "Laboratorio musicale Medie"
     target: "Bambini 11-14 anni"
     bando_vinto: "Scuole Aperte"
-    partecipanti: "10"
+    partecipanti: "15"
     focus: "Laboratorio di ascolto attivo, musica contemporanea"
     metodologia: "Attività interattive per sviluppo senso ritmico e percezione musicale"
 
@@ -81,6 +81,15 @@ insegnamento:
     target: "Bambini 3-5 anni"
     bando_vinto: "Scuole Aperte"
     partecipanti: "12-16"
+    focus: "Laboratorio di ascolto attivo, musica contemporanea"
+    metodologia: "Attività interattive per sviluppo senso ritmico e percezione musicale"
+
+  - periodo: "11/2025 -- oggi"
+    istituto: "Scuole Medie D. Buzzati"
+    tipo: "Laboratorio musicale Medie"
+    target: "Bambini 11-14 anni"
+    bando_vinto: "Scuole Aperte"
+    partecipanti: "26"
     focus: "Laboratorio di ascolto attivo, musica contemporanea"
     metodologia: "Attività interattive per sviluppo senso ritmico e percezione musicale"
 
