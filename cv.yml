@@ -236,7 +236,17 @@ attivita_concertistica:
     note: "CONCERTO ELETTROACUSTICO - Setup multicanale con Altoparlanti Tetraedrici S.T.One di Giuseppe Silvi"
 
   - data: "30/10/2025"
-    venue: "Auditorium del Conservatorio "A. Casella", L'Aquila"
+    venue: "Auditorium del Conservatorio 'A. Casella', L'Aquila"
+    organizzatore: "ElettroAQustica 2025"
+    evento: "Generazioni elettroacustiche"
+    titolo: "GAMMA (Giulio Romano De Mattia)"
+    tipo: "Repertorio"
+    organico: "Acusmatico"
+    ruolo: "Compositore, regia del suono"
+    note: "CONCERTO ELETTROACUSTICO"
+
+  - data: "30/10/2025"
+    venue: "Auditorium del Parco - 'Renzo Piano' "
     organizzatore: "ElettroAQustica 2025"
     evento: "Generazioni elettroacustiche"
     titolo: "GAMMA (Giulio Romano De Mattia)"
