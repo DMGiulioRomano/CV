@@ -245,17 +245,6 @@ attivita_concertistica:
     ruolo: "Compositore, regia del suono"
     note: "Regia del suono del concerto"
 
-  - data: "06/03/2026"
-    venue: "Auditorium del Parco - 'Renzo Piano' - L'Aquila"
-    organizzatore: "Progetto PNRR ItArts - Finanziato dall'Unione europea"
-    evento: "Generazioni elettroacustiche"
-    titolo: "GAMMA (Giulio Romano De Mattia)"
-    tipo: "Repertorio"
-    organico: "Acusmatico"
-    ruolo: "Compositore, regia del suono, live electronics"
-    note: "Realizzazione di live electronics e regia del suono per i brani ReBell (Gianmarco Piemari), Ricostruzione (Federico Martusciello)"
-
-
   - data: "08/01/2026"
     venue: "Jardin d'Hiver - Annecy, Francia"
     organizzatore: "Progetto PNRR ItArts - Finanziato dall'Unione europea"
@@ -266,6 +255,15 @@ attivita_concertistica:
     ruolo: "Compositore, regia del suono, live electronics"
     note: "Realizzazione di live electronics e regia del suono per i brani ReBell (Gianmarco Piemari), Ricostruzione (Federico Martusciello)"
 
+  - data: "06/03/2026"
+    venue: "Auditorium del Parco - 'Renzo Piano' - L'Aquila"
+    organizzatore: "Progetto PNRR ItArts - Finanziato dall'Unione europea"
+    evento: "Generazioni elettroacustiche"
+    titolo: "GAMMA (Giulio Romano De Mattia)"
+    tipo: "Repertorio"
+    organico: "Acusmatico"
+    ruolo: "Compositore, regia del suono, live electronics"
+    note: "Realizzazione di live electronics e regia del suono per i brani ReBell (Gianmarco Piemari), Ricostruzione (Federico Martusciello)"
 
 
 pubblicazioni:
